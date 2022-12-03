@@ -42,7 +42,7 @@ class App extends React.Component {
 
     return (
       <AppSection>
-        <GlobalStyle/>
+        <GlobalStyle />
         <Section titel="Please leave feedback">
           <FeedbackOptions
             options={objKey}
@@ -53,7 +53,7 @@ class App extends React.Component {
         {total === 0 ? (
           <Notification />
         ) : (
-          <Section title="Statistics">
+          <Section titel="Statistics">
             <Statistics
               good={good}
               neutral={neutral}

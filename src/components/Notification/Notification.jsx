@@ -1,10 +1,11 @@
 import React from 'react';
+import { NotificationWrap, NotificationText } from './Notification.styled';
 
 const Notification = () => {
   return (
-    <>
-      <p>No feedback given</p>
-    </>
+    <NotificationWrap>
+      <NotificationText>No feedback given</NotificationText>
+    </NotificationWrap>
   );
 };
 

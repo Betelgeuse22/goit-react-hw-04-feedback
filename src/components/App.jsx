@@ -3,6 +3,8 @@ import Section from './Section/Section';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Notification from './Notification/Notification';
 import Statistics from './Statistics/Statistics';
+import { GlobalStyle } from './GlobalStyle';
+import {AppSection} from './App.styled'
 
 class App extends React.Component {
   state = {
@@ -39,7 +41,8 @@ class App extends React.Component {
     const positivePercentage = this.countPositiveFeedbackPercentage();
 
     return (
-      <div>
+      <AppSection>
+        <GlobalStyle/>
         <Section titel="Please leave feedback">
           <FeedbackOptions
             options={objKey}
@@ -60,7 +63,7 @@ class App extends React.Component {
             />
           </Section>
         )}
-      </div>
+      </AppSection>
     );
   }
 }

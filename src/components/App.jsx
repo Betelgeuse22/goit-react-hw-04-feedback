@@ -4,7 +4,7 @@ import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Notification from './Notification/Notification';
 import Statistics from './Statistics/Statistics';
 import { GlobalStyle } from './GlobalStyle';
-import {AppSection} from './App.styled'
+import { AppSection } from './App.styled';
 
 class App extends React.Component {
   state = {
@@ -31,7 +31,6 @@ class App extends React.Component {
     this.setState(prevState => ({
       [name]: prevState[name] + 1,
     }));
-    
   };
 
   render() {
@@ -51,7 +50,7 @@ class App extends React.Component {
         </Section>
 
         {total === 0 ? (
-          <Notification />
+          <Notification massage="No feedback given" />
         ) : (
           <Section titel="Statistics">
             <Statistics

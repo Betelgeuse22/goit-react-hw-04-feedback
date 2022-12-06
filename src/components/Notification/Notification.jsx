@@ -1,12 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { NotificationWrap, NotificationText } from './Notification.styled';
 
-const Notification = () => {
+const Notification = ({ massage }) => {
   return (
     <NotificationWrap>
-      <NotificationText>No feedback given</NotificationText>
+      <NotificationText>{massage}</NotificationText>
     </NotificationWrap>
   );
+};
+
+Notification.propTypes = {
+  massage: PropTypes.string.isRequired,
 };
 
 export default Notification;
